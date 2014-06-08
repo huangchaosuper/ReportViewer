@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile-1.3.2.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/modules/exporting.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div data-role="page" data-theme="b" id="express">
+        <div data-role="header" data-theme="b" data-position="fixed">
+			<a href="#" data-icon="home" class="ui-btn-left home-btn" data-iconpos="notext">Home</a>
+            <h1>Express</h1>
+            <a href="#" data-icon="bars" class="ui-btn-right detail-btn" data-iconpos="notext">Detail</a>
+        </div>
+        <div data-role="content" data-theme="b" class="detail-grid">
+            <div id="container" style="max-height:300px"></div>
+            <div class="ui-grid-d" id="express-gridview" />
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a data-icon="star" href="#" class="express-link">Express</a></li>
+                    <li><a data-icon="bars" href="#" class="tendency-link">Tendency</a></li>
+                    <li><a data-icon="grid" href="#" class="summary-link">Summary</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

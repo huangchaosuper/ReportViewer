@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+       
+        ul {
+            list-style-type: square;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" data-theme="b" id="home">
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <h1 id="dashboard-title">Home</h1>
+        </div>
+        <div data-role="content" data-theme="b" id="homepage"></div>
+        <div id="about-popup" data-role="popup" class="ui-content project-detail" style="max-width: 280px">
+            <div id="about-detail" style="font-family: Calibri;font-size: 12px;text-align: center;">
+                <img src="img\icon.png" />
+                <h3>Test Report Viewer</h3>
+                <h5>Version:1.0</h5>
+                <p style="font-weight: bold;text-align:left;">Features:</p>
+                <ul style="text-align:left;">
+                    <li style="text-align:left;"><u>Express</u>: the new issue reports and details the same day </li>
+                    <li style="text-align:left;"><u>Tendency</u>: the tendency reports of issue submission and closure by daily, weekly or monthly </li>
+                    <li style="text-align:left;"><u>Summary</u>: the summary reports of all issues by categories, states or severities  </li>
+                </ul>
+                <h5>Contact us: <a href="mailto:TCOEMobility@groups.hp.com">TCOEMobility@groups.hp.com</a></h5>
+                <h5>Copyright © 2013 DS TCOE</h5>
+            </div>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a data-icon="info" href="#" class="about-link">About</a></li>
+                    <li><a data-icon="refresh" href="#" class="logout-link">Logout</a></li>
+                    <li><a data-icon="delete" href="#" class="exit-link">Exit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

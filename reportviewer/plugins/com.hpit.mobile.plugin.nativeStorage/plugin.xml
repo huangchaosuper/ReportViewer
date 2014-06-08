@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.nativeStorage"
+      version="8.2.0">
+    <name>NativeStoragePlugin</name>
+    <description>Storage for native API</description>
+    <license>HP</license>
+    <keywords>cordova</keywords>
+
+
+    <js-module src="www/NativeStoragePlugin.js" name="NativeStoragePlugin">
+        <clobbers target="window.NativeStoragePlugin" />
+    </js-module>
+
+    <!-- android -->
+    <!-- NativeStoragePlugin -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SharedPreferencesDataStoragePlugin">
+                <param name="android-package" value="com.hpit.mobile.login.SharedPreferencesDataStoragePlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/SharedPreferencesDataStoragePlugin.java" target-dir="src/com/hpit/mobile/login" />
+        <source-file src="src/android/dataStorage/IDataStorage.java" target-dir="src/com/hpit/mobile/login/dataStorage" />
+        <source-file src="src/android/dataStorage/LoginDataStorageStatus.java" target-dir="src/com/hpit/mobile/login/dataStorage" />
+        <source-file src="src/android/dataStorage/SharedPreferencesDataStorage.java" target-dir="src/com/hpit/mobile/login/dataStorage" />      
+    </platform>
+
+    <!-- ios -->
+    <!-- NativeStoragePlugin -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="SharedPreferencesDataStoragePlugin">
+                <param name="ios-package" value="SharedPreferencesDataStoragePlugin" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SharedPreferencesDataStoragePlugin.h" />
+        <source-file src="src/ios/SharedPreferencesDataStoragePlugin.m" />
+        <header-file src="src/ios/KeychainRepository.h" />
+        <source-file src="src/ios/KeychainRepository.m" />
+        <framework src="Security.framework" />        
+
+    </platform> 
+</plugin>

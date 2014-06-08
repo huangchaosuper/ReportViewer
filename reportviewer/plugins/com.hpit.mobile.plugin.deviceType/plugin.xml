@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.deviceType"
+      version="8.2.0">
+    <name>DeviceTypePlugin</name>
+    <description>Check Android Device Type - tablet or phone</description>
+    <license>HP</license>
+    <keywords>cordova,deviceType</keywords>
+
+
+    <js-module src="www/DeviceTypePlugin.js" name="DeviceTypePlugin">
+        <clobbers target="window.DeviceTypePlugin" />
+    </js-module>
+
+    <!-- android -->
+    <!-- DeviceTypePlugin -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DeviceTypePlugin">
+                <param name="android-package" value="com.hpit.mobile.login.DeviceTypePlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/DeviceTypePlugin.java" target-dir="src/com/hpit/mobile/login" />      
+    </platform>
+
+</plugin>

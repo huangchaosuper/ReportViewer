@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.getAppInfo"
+      version="8.2.0">
+    <name>GetAppInfoPlugin</name>
+    <description>Get App Info - tablet or phone</description>
+    <license>HP</license>
+    <keywords>cordova, appinfo</keywords>
+
+
+    <js-module src="www/GetAppInfoPlugin.js" name="GetAppInfoPlugin">
+        <clobbers target="window.GetAppInfoPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <!-- GetAppInfoPlugin -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GetAppInfoPlugin">
+                <param name="android-package" value="com.hpit.mobile.login.GetAppInfoPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/GetAppInfoPlugin.java" target-dir="src/com/hpit/mobile/login" />      
+    </platform>
+
+    <!-- ios -->
+    <!-- GetAppInfoPlugin -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="GetAppInfoPlugin">
+                <param name="ios-package" value="GetAppInfoPlugin" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/GetAppInfoPlugin.h" />
+        <source-file src="src/ios/GetAppInfoPlugin.m" />
+    </platform> 
+</plugin>

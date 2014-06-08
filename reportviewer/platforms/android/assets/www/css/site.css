@@ -1,0 +1,41 @@
+﻿.hp-div {
+   	margin:10px 10px 10px 10px;
+}
+body {
+    font-family:Veranda, Geneva, sans-serif;
+    font-size:12px;
+}
+@media all and (min-width: 7em) {
+    .detail-grid .ui-grid-d .ui-block-a {
+        width: 34%;
+    }
+
+    .detail-grid .ui-grid-d .ui-block-b {
+        width: 13%;
+    }
+
+    .detail-grid .ui-grid-d .ui-block-c {
+        width: 13%;
+    }
+
+    .detail-grid .ui-grid-d .ui-block-d {
+        width: 13%;
+    }
+
+    .detail-grid .ui-grid-d .ui-block-e {
+        width: 13%;
+    }
+    .detail-grid .ui-grid-d .ui-block-f {
+        width: 14%;
+    }
+    .ui-bar {
+        text-align:left;
+        font-size:14px;
+    }
+}
+.project-title{
+	font-size:18px;
+}
+.project-detail{
+	font-size:16px;
+}

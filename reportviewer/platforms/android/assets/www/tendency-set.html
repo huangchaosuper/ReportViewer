@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile-1.3.2.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.2.js"></script>
+    <script type="text/javascript" src="js/highcharts.js"></script>
+    <script type="text/javascript" src="js/modules/exporting.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div data-role="page" data-theme="b" id="tendency-set">
+        <script type="text/javascript" src="js/pages/tendency-set.js"></script>
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <a href="#" data-icon="check" class="ui-btn-right check-btn" data-iconpos="notext">submit</a>
+            <h1>Option</h1>
+        </div>
+        <div data-role="content" data-theme="b">
+            <ul data-role="listview" data-divider-theme="b" data-theme="d" data-inset="true">
+                <li data-role="list-divider" style="font-size:18px">Settings</li>
+                <li><a href="#" id="startdate-btn"><h2>Start Date</h2><p id="startdate-label">01/01/2013</p></a></li>
+                <li><a href="#" id="enddate-btn"><h2>End Date</h2><p id="enddate-label">09/09/2013</p></a></li>
+                <li><a href="#" class="interval-btn"><h2>Interval</h2><p id="interval-label">Weekly</p></a></li>
+            </ul>
+            <div style="display:none" data-content-theme="b">
+                <input data-overlay-theme="b" name="startdate-datebox" type="text" data-role="datebox" data-options='{"mode": "flipbox","centerHoriz": true,"themeHeader":"b"}' id="startdate-datebox" />
+                <input data-overlay-theme="b" name="enddate-datebox" type="text" data-role="datebox" data-options='{"mode": "flipbox", "centerHoriz": true,"themeHeader":"b"}' id="enddate-datebox" />
+            </div>
+            <div data-role="popup" id="popupMenu" data-theme="d">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">
+					<li data-role="divider" data-theme="b">Interval</li>
+					<li data-theme="d"><a href="#" class="interval-link-daily">Daily</a></li>
+					<li data-theme="d"><a href="#" class="interval-link-weekly">Weekly</a></li>
+					<li data-theme="d"><a href="#" class="interval-link-monthly">Monthly</a></li>
+				</ul>
+		    </div>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a data-icon="star" href="#" class="express-link">Express</a></li>
+                    <li><a data-icon="bars" href="#" class="tendency-link">Tendency</a></li>
+                    <li><a data-icon="grid" href="#" class="summary-link">Summary</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

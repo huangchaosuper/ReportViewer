@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.browserOpen"
+      version="8.2.0">
+    <name>BrowserOpenPlugin</name>
+    <description>Open browser with a cookie</description>
+    <license>HP</license>
+    <keywords>cordova</keywords>
+
+
+    <js-module src="www/BrowserOpenPlugin.js" name="BrowserOpenPlugin">
+        <clobbers target="window.BrowserOpenPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <!-- BrowserOpenPlugin -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="OpenBrowserWithCookiePlugin">
+                <param name="android-package" value="com.hpit.mobile.login.OpenBrowserWithCookiePlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/OpenBrowserWithCookiePlugin.java" target-dir="src/com/hpit/mobile/login" />      
+     </platform>
+     
+    <!-- ios -->
+    <!-- BrowserOpenPlugin -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="OpenBrowserWithCookiePlugin">
+                <param name="ios-package" value="OpenBrowserWithCookiePlugin" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/OpenBrowserWithCookiePlugin.h" />
+        <source-file src="src/ios/OpenBrowserWithCookiePlugin.m" />
+    </platform> 
+</plugin>

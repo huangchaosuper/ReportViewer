@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.deviceId"
+      version="8.2.0">
+    <name>GetDeviceIdPlugin</name>
+    <description>Get iOS Device id</description>
+    <license>HP</license>
+    <keywords>cordova,deviceId</keywords>
+
+
+    <js-module src="www/GetDeviceIdPlugin.js" name="GetDeviceIdPlugin">
+        <clobbers target="window.GetDeviceIdPlugin" />
+    </js-module>
+
+    <!-- ios -->
+    <!-- GetDeviceIdPlugin -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="GetDeviceIdPlugin">
+                <param name="ios-package" value="GetDeviceIdPlugin" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/GetDeviceIdPlugin.h" />
+        <source-file src="src/ios/GetDeviceIdPlugin.m" />
+    </platform> 
+
+</plugin>

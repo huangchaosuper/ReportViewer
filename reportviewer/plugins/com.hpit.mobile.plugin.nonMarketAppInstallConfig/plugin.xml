@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.hpit.mobile.plugin.nonMarketAppInstallConfig"
+      version="8.2.0">
+    <name>NonMarketAppInstallConfigPlugin</name>
+    <description>Get and set option of non-market app install</description>
+    <license>HP</license>
+    <keywords>cordova</keywords>
+
+
+    <js-module src="www/NonMarketAppInstallConfigPlugin.js" name="NonMarketAppInstallConfigPlugin">
+        <clobbers target="window.NonMarketAppInstallConfigPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <!-- NonMarketAppInstallConfigPlugin -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="NonMarketAppInstallConfigPlugin">
+                <param name="android-package" value="com.hpit.mobile.login.NonMarketAppInstallConfigPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/NonMarketAppInstallConfigPlugin.java" target-dir="src/com/hpit/mobile/login" />      
+     </platform>
+</plugin>
